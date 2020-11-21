@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hackathon</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+.edit-button {
+  background-color:#00bbac; 
+  color: white; 
+}
+.edit-button:hover {
+    background-color: #ffff00;
+    color: white;
+}
+.delete-button {
+    background-color:#ff0000; 
+    color: white; 
+}
+.delete-button:hover {
+      background-color: #ffff00;
+      color: white;
+}
+.threadd{
+  background-color: #2bab17;
+}
+.add-button {
+  background-color:#2bab17; 
+  color: white; 
+  border-radius: 8px;
+}
+
+.dropbtn {
+  background-color: #2bab17;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.btn-group button {
+  background-color: #4CAF50;
+  border: 1px solid green;
+  color: white; 
+  padding: 5px 10px; 
+  cursor: pointer; 
+  float: left;
+}
+
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none;
+}
+
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+
+</style>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">MCU_InYourArea</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="hackathonHome.html">log out</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <center>
+      <h2>Daftar Data Dokter</h2>
+    </center>
+    <div class="search-container">
+      <button class="add-button"><i class="fa fa-plus"></i> tambah dokter</button>
+      <button type="submit" style="float:right;"><i class="fa fa-search"></i></button>
+      <input type="text" placeholder="Search.." name="search" style="float:right;">
+    </div>
+  
+    <table class="table">
+      <br>
+      <thead class="threadd">
+        <tr style="color:white">
+          <th>No</th>
+          <th>Kode Dokter</th>
+          <th>Nama Dokter</th>
+          <th>Spesialis</th>
+          <th>Jenis Kelamin</th>
+          <th>Alamat</th>
+          <th>Telepon</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>25</td>
+          <td>Ahn Jae Woo</td>
+          <td>Jantung</td>
+          <td>L</td>
+          <td>Korea</td>
+          <td>082345679845</td>
+          <td>
+            <center>
+              <div class="dropdown btn-group">
+                <button><i class="fa fa-wrench"></i>Action</button>
+                <button onclick="myFunction()" class="dropbtn"><i class="fa fa-caret-down"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+                </div>
+              </div>
+            </center>
+          </td>
+
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>24</td>
+          <td>Ma Jin Joo</td>
+          <td>penyakit dalam</td>
+          <td>P</td>
+          <td>Jepang</td>
+          <td>082874698457</td>
+          <td>
+            <center>
+              <div class="dropdown btn-group">
+                <button><i class="fa fa-wrench"></i>Action</button>
+                <button onclick="myFunction()" class="dropbtn"><i class="fa fa-caret-down"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+                </div>
+              </div>
+            </center>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>23</td>
+          <td>Choi Ban Do</td>
+          <td>Paru-Paru</td>
+          <td>L</td>
+          <td>Thailand</td>
+          <td>089644358845</td>
+          <td>
+            <center>
+              <div class="dropdown btn-group">
+                <button><i class="fa fa-wrench"></i>Action</button>
+                <button onclick="myFunction()" class="dropbtn"><i class="fa fa-caret-down"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+                </div>
+              </div>
+            </center>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

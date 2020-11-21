@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hackathon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .edit-button {
+  background-color:#00bbac; 
+  color: white; 
+}
+.edit-button:hover {
+    background-color: #ffff00;
+    color: white;
+}
+.delete-button {
+    background-color:#ff0000; 
+    color: white; 
+}
+.delete-button:hover {
+      background-color: #ffff00;
+      color: white;
+}
+
+</style>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">MCU_InYourArea</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="Hackathon.html">log out</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <center>
+            <h2>Daftar Data Pasien</h2>
+        </center>
+        <div class="search-container">
+                <button type="submit" style="float:right;"><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="Search.." name="search" style="float:right;">
+              </div>
+        <br>
+        <table class="table table-hover">
+            <br>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>ID Pasien</th>
+                    <th>Nama Pasien</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Alamat</th>
+                    <th>Telepon</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>Ahn Jae Woo</td>
+                    <td>L</td>
+                    <td>Korea</td>
+                    <td>082345679845</td>
+                    <td>
+                        <center>
+                            <a href="after_login.html"><button type="button" class="btn edit-button"><i
+                                        class="fa fa-pencil"></i></button></a>
+                            <a href="after_login.html"><button type="button" class="btn delete-button"><i
+                                        class="fa fa-trash"></i></button></a>
+                        </center>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>24</td>
+                    <td>Ma Jin Joo</td>
+                    <td>P</td>
+                    <td>Jepang</td>
+                    <td>082874698457</td>
+                    <td>
+                        <center>
+                            <a href="after_login.html"><button type="button" class="btn edit-button"><i
+                                        class="fa fa-pencil"></i></button></a>
+                            <a href="after_login.html"><button type="button" class="btn delete-button"><i
+                                        class="fa fa-trash"></i></button></a>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>23</td>
+                    <td>Choi Ban Do</td>
+                    <td>L</td>
+                    <td>Thailand</td>
+                    <td>089644358845</td>
+                    <td>
+                        <center>
+                            <a href="after_login.html"><button type="button" class="btn edit-button"><i
+                                        class="fa fa-pencil"></i></button></a>
+                            <a href="after_login.html"><button type="button" class="btn delete-button"><i
+                                        class="fa fa-trash"></i></button></a>
+                        </center>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

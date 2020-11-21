@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hackathon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="datatables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="datatables.min.css">
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .nav1 {
+        float: left;
+        width: 50%;
+        height: 170px;
+        background: #f1f1f1;
+        padding: 20px;
+    }
+
+    .nav1 ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .art {
+        float: left;
+        padding: 20px;
+        width: 50%;
+        background-color: #f1f1f1;
+        height: 170px;
+    }
+
+    .sec:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .foot {
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-align: center;
+        color: black;
+    }
+
+    @media (max-width: 600px) {
+
+        .nav1,
+        .art {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .col {
+        background-color: #f1f1f1;
+        margin-left: -15px;
+        margin-right: 15px;
+    }
+</style>
+
+<body style="background-color:#e3e3e3;">
+        <script type="text/javascript">
+            function disable_enable(el) {
+                el.disabled = true;
+                if (el.value == 'login')
+                    document.test.logout.disabled = false;
+                else
+                    document.test.login.disabled = false;
+            }
+        </script>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">MCU_InYourArea</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Report</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li id="logout" value="logout" name="b2" disabled onclick='disable_enable(this)'><a href="hackathonHome.html">log out</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="col-sm-8">
+        <div class="container-fluid">
+            <div class="sec">
+                <div class="nav1">
+                    <table>
+                        <tr>
+                            <td width="150">No.Med.Rec</td>
+                            <td width="200">: 0001</td>
+                        </tr>
+                        <tr>
+                            <td>Nama Pasien</td>
+                            <td>: Lalisa Manoban</td>
+                        </tr>
+                        <tr>
+                            <td>Tgl.Lahir</td>
+                            <td>: 21-10-2010</td>
+                        </tr>
+                        <tr>
+                            <td>Alamat </td>
+                            <td>: jl.Bambu,No.8,RT.03/RW.03</td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin </td>
+                            <td>: Perempuan</td>
+                        </tr>
+                        <tr>
+                            <td>Umur </td>
+                            <td>: 20 tahun</td>
+                        </tr>
+                        <tr>
+                            <td>Telepon</td>
+                            <td>: 08876764345</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="art">
+                    <div style="text-align:left">Nama Peserta Akses :<br>Lalisa Manoban
+                        <div style="text-align:right"><button type="button" class="btn btn-success"><i
+                                    class="fa fa-print"></i>Cetak</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="foot">
+                <div class="table-responsive">
+                    <table class="table table-bordered" style="text-align:left" id="myTable" class="display">
+                        <thead>
+                            <tr>
+                                <th>Tanggal </th>
+                                <th>Anamnese/Diagnosa</th>
+                                <th>Terapi</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>08/05/2016</td>
+                                <td>Demam,Nelan Sakit</td>
+                                <td>PCT 3x1 Nadic 1x1</td>
+                                <td>
+                                    <center>
+                                        <button type="button" class="btn btn-primary"><i
+                                                class="fa fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger"><i
+                                                class="fa fa-trash"></i></button>
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>26/07/2016</td>
+                                <td>Mimisan, Muntah-Muntah</td>
+                                <td>PCT 3x1</td>
+                                <td>
+                                    <center>
+                                        <button type="button" class="btn btn-primary"><i
+                                                class="fa fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger"><i
+                                                class="fa fa-trash"></i></button>
+                                    </center>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+            <div class="container-fluid col">
+                <form action="/action_page.php" style="margin-top:15px;margin-bottom:15px;">
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal:</label>
+                        <input type="date" class="form-control" id="tanggal">
+                    </div>
+                    <div class="form-group">
+                        <label for="Anamnese">Anamnese/Diagnosa:</label>
+                        <textarea rows="5" class="form-control" id="Anamnese"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="terapi">Terapi:</label>
+                        <textarea rows="5" class="form-control" id="terapi"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </form>
+            </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });</script>
+
+</body>
+
+</html>

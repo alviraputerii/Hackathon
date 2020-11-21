@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hackathon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+
+    .topnav .login-container {
+        float: right;
+    }
+
+    .topnav input[type=text] {
+        padding: 6px;
+        margin-top: 7px;
+        border: none;
+        width: 120px;
+    }
+
+    .topnav .login-container button {
+        float: right;
+        padding: 6px 9px;
+        margin-top: 7px;
+        margin-right: 16px;
+        background-color: #555;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .topnav .login-container button:hover {
+        background-color: green;
+    }
+
+    /* @media screen and (max-width: 600px) {
+        .topnav .login-container {
+            float: none;
+        }
+
+        .topnav a,
+        .topnav input[type=text],
+        .topnav .login-container button {
+            float: none;
+            display: block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 14px;
+        }
+
+        .topnav input[type=text] {
+            border: 1px solid #ccc;
+        }
+    } */
+    .col {
+        background-color: #f1f1f1;
+        margin-left: -15px;
+        margin-right: 15px;
+    }
+
+    .formbox {
+        display: inline-block;
+        width: 399px;
+    }
+
+    .spanpad {
+        padding: 15px 0 5px 4px;
+        display: inline-block;
+    }
+
+    .signbut {
+        letter-spacing: 1px;
+        color: #fff;
+        padding: 7px 10px;
+        text-align: center;
+        -webkit-border-radius: 5px;
+        background: -webkit-linear-gradient(#67ae55, #578843);
+        -webkit-box-shadow: inset 0 1px 1px #a4e388;
+        border: 1px solid;
+        border-color: #3b6e22 #3b6e22 #2c5115;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+        cursor: pointer;
+    }
+
+    .signbut:hover {
+        background: -webkit-linear-gradient(#79bc64, #578843);
+    }
+
+    .container-fluid1 {
+        padding-top: 8px;
+        padding-right: 15px;
+        padding-left: 35px;
+    }
+</style>
+
+<body style="background-color:#e3e3e3;">
+        <script>
+               
+                function validate(){
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                if ( username == "vira" && password == "vira"){
+                alert ("Login successfully");
+                window.location = "dataRekamMedis.html"; 
+                return false;
+                }
+                else{
+                    alert ("Try Again!");
+                // document.getElementById("username").disabled = true;
+                // document.getElementById("password").disabled = true;
+                // document.getElementById("submit").disabled = true;
+                return false;
+                }
+                }</script>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid topnav">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">MCU_InYourArea</a>
+            </div>
+            <div class="login-container">
+                <form id="form_id" method="post" name="myform">
+                    
+                        <input type="text" name="username" id="username" placeholder="Username" style="font-size:14px; height:32px;"  required>
+                        <input type="Password" name="password" id="password" placeholder="Password" style="height:32px; border:none; padding-left:10px" required>
+                        <input type="button" value="Login" id="submit" onclick="validate()"/>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="col-sm-6">
+        <div class="container-fluid">
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="container-fluid1 col">
+            <div style="margin-top:15px">
+                <h1>Sign Up</h1>
+            </div>
+            <form action="/action_page.php" style="margin-top:15px;margin-bottom:15px;">
+                <div id="register_wrapper">
+                    <table cellpadding="5">
+                        <tr>
+                            <td>
+                                <div align="left"><label><span class="bold">Personal Details</span></label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div align="left"><label><span class="glyphicon glyphicon-user"></span> First
+                                        Name</label></div>
+                                <input id="firstname" name="firstname" type="text" required="required"
+                                    placeholder="First Name" style="width:235px"><br />
+                            </td>
+                            <td>
+                                <div align="left"><label>Last Name</label></div>
+                                <input id="Lastname" name="lastname" type="text" required="required"
+                                    placeholder="Last Name" style="width:235px"><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div align="left" style="margin-top: 3%;"><label><span
+                                            class="glyphicon glyphicon-home"></span>
+                                        Address</label></div>
+                                <textarea id="address" name="address" required="required" rows="5" cols="30"
+                                    style=" margin-right: 40px;"></textarea><br />
+                            </td>
+                            <td>
+                                <div align="left"><label><span class="glyphicon glyphicon-flag"></span>
+                                        City</label></div>
+                                <input id="city" name="city" type="text" required="required" placeholder="City"
+                                    style="width:235px"><br />
+
+                                <div align="left" style="margin-top: 3%;"><label><span
+                                            class="glyphicon glyphicon-envelope"></span> Email</label></div>
+                                <input id="uemail" name="uemail" type="email" required="required"
+                                    placeholder="example@domain.com" style="width:235px"><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div align="left"><label><span class="glyphicon glyphicon-lock"></span>
+                                        Password</label></div>
+                                <input id="pword" name="pword" type="password" required="required"
+                                    placeholder="Password" style="width:235px"><br />
+                            </td>
+                            <td>
+                                <div align="left"><label><span class="glyphicon glyphicon-repeat"></span> Confirm
+                                        Password </label> <span id='message'></span></div>
+                                <input id="cpword" name="cpword" type="password" required="required"
+                                    placeholder="Confirm Password" style="width:235px"><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div align="left" class="mt1"></div>
+                                <span data-type="radio" class="spanpad">
+                                    <label><input type="radio" name="optradio" checked>Female</label><br>
+                                    <label><input type="radio" name="optradio">Male</label>
+                                </span>
+                            </td>
+                            <td>
+                                <div align="left" style="margin-top: 3%;"><label><span
+                                            class="glyphicon glyphicon-phone"></span> Contact
+                                        Number</label></div>
+                                <input id="contact" name="contact" type="text" required="required" size="12"
+                                    maxlength="12" placeholder="Contact Number" style="width:235px"><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="submit" class="signbut bolder">Sign Up</button>
+                            </td>
+                        </tr>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
